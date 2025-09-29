@@ -30,7 +30,7 @@ app.get("/solutions/projects", (req, res) => {
 });
 
 app.get("/solutions/projects/id-demo", (req, res) => {
-    projectData.getProjectById(9)
+    projectData.getProjectById(100)
         .then((project) => {
             res.json(project);
         })
@@ -41,7 +41,7 @@ app.get("/solutions/projects/id-demo", (req, res) => {
 });
 
 app.get("/solutions/projects/sector-demo", (req, res) => {
-    projectData.getProjectsBySector("agri")
+    projectData.getProjectsBySector("funny project")
         .then((projects) => {
             res.json(projects);
         })
