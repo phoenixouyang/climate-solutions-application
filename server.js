@@ -41,7 +41,7 @@ app.get("/solutions/projects/id-demo", (req, res) => {
 });
 
 app.get("/solutions/projects/sector-demo", (req, res) => {
-    projectData.getProjectsBySector("funny project")
+    projectData.getProjectsBySector("funny projects")
         .then((projects) => {
             res.json(projects);
         })
