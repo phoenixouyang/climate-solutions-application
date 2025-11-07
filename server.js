@@ -20,10 +20,6 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
-// app.get("/", (req, res) => 
-//     res.send("Assignment 1 - Phoenix Ouyang - 135264240")
-// );
-
 app.get("/", (req, res) => {
     res.render("home");
 });
@@ -32,6 +28,7 @@ app.get("/about", (req, res) => {
     res.render("about");
 });
 
+// sector search route
 app.get("/solutions/projects", (req, res) => {
     const sector = req.query.sector;
 
@@ -46,20 +43,33 @@ app.get("/solutions/projects", (req, res) => {
             res.json(projects);
         })
         .catch((err) => {
-            res.render("404");
+            res.render("404", {
+                errorMsg: err
+            });
         });
     }
 });
 
-app.get("/solutions/projects/id-demo", (req, res) => {
-    projectData.getProjectById(9)
+// project id route
+app.get("/solutions/projects/:id", (req, res) => {
+    const id = req.params.id;
+
+    projectData.getProjectById(id)
         .then((project) => {
             res.json(project);
         })
         .catch((err) => {
-            console.log(err);
-            res.send(err);
+            res.render("404", {
+                errorMsg: err
+            });
         });
+});
+
+// catch requests for routes that don't exist
+app.use((req, res, next) => {
+  res.render("404", {
+    errorMsg: "Sorry, we couldn't find what you're looking for."
+  })
 });
 
 projectData.Initialize()
