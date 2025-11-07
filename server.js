@@ -32,31 +32,29 @@ app.get("/about", (req, res) => {
     res.render("about");
 });
 
-app.get("/error", (req, res) => {
-    res.render("404");
-});
-
 app.get("/solutions/projects", (req, res) => {
-    projectData.getAllProjects().then((projects) => {
-        res.json(projects);
-    });
+    const sector = req.query.sector;
+
+    if (!sector) {
+        projectData.getAllProjects().then((projects) => {
+            res.json(projects);
+        });
+    }
+    else {
+        projectData.getProjectsBySector(sector)
+        .then((projects) => {
+            res.json(projects);
+        })
+        .catch((err) => {
+            res.render("404");
+        });
+    }
 });
 
 app.get("/solutions/projects/id-demo", (req, res) => {
     projectData.getProjectById(9)
         .then((project) => {
             res.json(project);
-        })
-        .catch((err) => {
-            console.log(err);
-            res.send(err);
-        });
-});
-
-app.get("/solutions/projects/sector-demo", (req, res) => {
-    projectData.getProjectsBySector("agri")
-        .then((projects) => {
-            res.json(projects);
         })
         .catch((err) => {
             console.log(err);
