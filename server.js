@@ -19,9 +19,13 @@ const projectData = require("./modules/projects");
 
 app.use(express.static('public'));
 
-app.get("/", (req, res) => 
-    res.send("Assignment 1 - Phoenix Ouyang - 135264240")
-);
+// app.get("/", (req, res) => 
+//     res.send("Assignment 1 - Phoenix Ouyang - 135264240")
+// );
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/home.html"));
+});
 
 app.get("/solutions/projects", (req, res) => {
     projectData.getAllProjects().then((projects) => {
