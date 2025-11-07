@@ -17,6 +17,7 @@ const port = 3000;
 const path = require('path');
 const projectData = require("./modules/projects");
 app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
 
 app.use(express.static('public'));
 
@@ -34,13 +35,15 @@ app.get("/solutions/projects", (req, res) => {
 
     if (!sector) {
         projectData.getAllProjects().then((projects) => {
-            res.json(projects);
+            res.render("projects", 
+                {projects: projects});
         });
     }
     else {
         projectData.getProjectsBySector(sector)
         .then((projects) => {
-            res.json(projects);
+            res.render("projects", 
+                {projects: projects});
         })
         .catch((err) => {
             res.render("404", {
@@ -56,7 +59,8 @@ app.get("/solutions/projects/:id", (req, res) => {
 
     projectData.getProjectById(id)
         .then((project) => {
-            res.json(project);
+            res.render("project", 
+                {project: project});
         })
         .catch((err) => {
             res.render("404", {

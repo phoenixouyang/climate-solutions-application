@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sunset">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Climate Solutions</title>
+</head>
+<body>
+    <!-- navbar -->
+    <%- include('partials/navbar', {page: '/solutions/projects/:id'}) %>
+    <br>
+    <!-- about page content -->
+     <div class="container mx-auto">
+        <!-- hero component -->
+        <div class="hero bg-base-200 rounded-lg p-8">
+            <div class="hero-conten text-center">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold"><%= project.title %></h1>
+                    <p class="py-6">
+                        Below, you will find detailed information about the project: <%= project.title %>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- project grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+            <div>
+                <img class="w-full" src="<%= project.feature_img_url %>" alt="<%= project.title %>" />
+            </div>
+            <div>          
+                <p><%= project.intro_short %></p><br>
+                <h2 class="font-bold text-base">Impact:</h3><br>
+                <p><%= project.impact %></p><br>
+                <h2 class="font-bold text-base">More Information:</h3><br>
+                <p><a class="link" target="_blank" href="<%= project.original_source_url %>"><%= project.original_source_url %></a></p><br>
+                <div id="quote-div"></div><br><br>
+                <a class="btn btn-secondary" href="#" onclick="history.back(); return false;">Return</a>
+                <br>
+                <br>
+            </div>
+        </div>                
+     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+        /* TODO: "fetch" the data at: https://dummyjson.com/quotes/random and update an element in the DOM with the "quote" and "author" */
+        });
+    </script>
+</body>
+</html>
