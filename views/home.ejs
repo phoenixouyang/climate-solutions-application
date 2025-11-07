@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sunset">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Climate Solutions</title>
+</head>
+<body>
+    <!-- navbar -->
+    <div class="navbar bg-base-100">
+    <div class="flex-1">
+        <a href="/" class="btn btn-ghost normal-case text-xl">Climate Solutions</a>
+    </div>
+
+     <div class="dropdown">
+    <label tabindex="0" class="btn btn-ghost sm:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+    </label>
+    <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="/about">About</a></li>
+        <li>
+        <details>
+            <summary>
+            Sector
+            </summary>
+            <ul class="p-2 bg-base-100">
+                <li><a>Land Sinks</a></li>
+                <li><a>Transportation</a></li>
+                <li><a>Electricity</a></li>
+            </ul>
+        </details>
+        </li>
+    </ul>
+    </div>
+    <div class="navbar-center hidden sm:flex">
+        <ul class="menu menu-horizontal px-1">
+        <li><a>About</a></li>
+        <li>
+            <details>
+            <summary>Sector</summary>
+            <ul class="p-2 bg-base-100 right-0">
+                <li><a>Land Sinks</a></li>
+                <li><a>Transportation</a></li>
+                <li><a>Electricity</a></li>
+            </ul>
+            </details>
+        </li>
+        </ul>
+    </div>
+    </div>
+
+    <!-- home page content -->
+     <div class="container mx-auto">
+        <!-- hero component -->
+        <div class="hero bg-base-200 rounded-lg p-8">
+            <div class="hero-conten text-center">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">Together, we’re building a sustainable future.</h1>
+                    <p class="py-6">
+                        Here, you’ll discover innovative projects from around the world tackling the urgent challenges of climate change, from renewable energy breakthroughs to grassroots conservation efforts.
+                        Join us in supporting the ideas that make a difference — because every action counts.
+                    </p>
+                    <button class="btn btn-secondary">Get Started</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- projects grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div>
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="w-full" src="https://drawdown.org/sites/default/files/solutions/solution_managedgrazing01.jpg" alt="Managed Grazing" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Managed Grazing</h2>
+                        <p>Managed grazing involves carefully controlling livestock density and timing and intensity of grazing. Compared with conventional pasture practices, it can improve the health of grassland soils, sequestering carbon.</p>
+                        <div class="card-actions justify-end py-6">
+                        <a href="/solutions/projects/6" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>          
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="w-full" src="https://drawdown.org/sites/default/files/solutions/solution_concentratedsolar01.jpg" alt="Concentrated Solar Power" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Concentrated Solar Power</h2>
+                        <p>Concentrated solar power uses sunlight as a heat source. Arrays of mirrors concentrate incoming rays onto a receiver to heat fluid, produce steam, and turn turbines.</p>
+                        <div class="card-actions justify-end py-6">
+                        <a href="/solutions/projects/9" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>   
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="w-full" src="https://drawdown.org/sites/default/files/solutions2020/solution_electric_bicycles.jpg" alt="Electric Bicycles" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Electric Bicycles</h2>
+                        <p>Battery-powered motors can boost the use of bicycles, reducing greenhouse gas emissions from cars.</p>
+                        <div class="card-actions justify-end py-6">
+                        <a href="/solutions/projects/28" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                
+     </div>
+</body>
+</html>

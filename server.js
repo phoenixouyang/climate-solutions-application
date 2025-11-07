@@ -1,12 +1,12 @@
 /********************************************************************************
-* WEB322 – Assignment 01
+* WEB322 – Assignment 02
 *
 * I declare that this assignment is my own work in accordance with Seneca's
 * Academic Integrity Policy:
 *
 * https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
 *
-* Name: _____Phoenix Ouyang_____ Student ID: ____135264240____ Date: _____September 27, 2025_____
+* Name: _____Phoenix Ouyang_____ Student ID: ____135264240____ Date: November 9, 2025_____
 *
 ********************************************************************************/
 
@@ -16,6 +16,7 @@ const app = express();
 const port = 3000;
 const path = require('path');
 const projectData = require("./modules/projects");
+app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
@@ -24,7 +25,7 @@ app.use(express.static('public'));
 // );
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/home.html"));
+    res.render("home");
 });
 
 app.get("/solutions/projects", (req, res) => {
