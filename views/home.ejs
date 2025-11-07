@@ -8,48 +8,8 @@
 </head>
 <body>
     <!-- navbar -->
-    <div class="navbar bg-base-100">
-    <div class="flex-1">
-        <a href="/" class="btn btn-ghost normal-case text-xl">Climate Solutions</a>
-    </div>
-
-     <div class="dropdown">
-    <label tabindex="0" class="btn btn-ghost sm:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
-    </label>
-    <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a href="/about">About</a></li>
-        <li>
-        <details>
-            <summary>
-            Sector
-            </summary>
-            <ul class="p-2 bg-base-100">
-                <li><a>Land Sinks</a></li>
-                <li><a>Transportation</a></li>
-                <li><a>Electricity</a></li>
-            </ul>
-        </details>
-        </li>
-    </ul>
-    </div>
-    <div class="navbar-center hidden sm:flex">
-        <ul class="menu menu-horizontal px-1">
-        <li><a>About</a></li>
-        <li>
-            <details>
-            <summary>Sector</summary>
-            <ul class="p-2 bg-base-100 right-0">
-                <li><a>Land Sinks</a></li>
-                <li><a>Transportation</a></li>
-                <li><a>Electricity</a></li>
-            </ul>
-            </details>
-        </li>
-        </ul>
-    </div>
-    </div>
-
+    <%- include('partials/navbar', {page: '/'}) %>
+    <br>
     <!-- home page content -->
      <div class="container mx-auto">
         <!-- hero component -->
@@ -61,7 +21,7 @@
                         Here, you’ll discover innovative projects from around the world tackling the urgent challenges of climate change, from renewable energy breakthroughs to grassroots conservation efforts.
                         Join us in supporting the ideas that make a difference — because every action counts.
                     </p>
-                    <button class="btn btn-secondary">Get Started</button>
+                    <a href="/solutions/projects" class="btn btn-secondary">Get Started</a>
                 </div>
             </div>
         </div>
@@ -77,7 +37,7 @@
                         <h2 class="card-title">Managed Grazing</h2>
                         <p>Managed grazing involves carefully controlling livestock density and timing and intensity of grazing. Compared with conventional pasture practices, it can improve the health of grassland soils, sequestering carbon.</p>
                         <div class="card-actions justify-end py-6">
-                        <a href="/solutions/projects/6" class="btn btn-secondary">Learn More</a>
+                        <a href="/solutions/projects/16" class="btn btn-secondary">Learn More</a>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sunset">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>About</title>
+</head>
+<body>
+    <!-- navbar -->
+    <%- include('partials/navbar', {page: '/about'}) %>
+    <br>
+    <!-- about page content -->
+     <div class="container mx-auto">
+        <!-- hero component -->
+        <div class="hero bg-base-200 rounded-lg p-8">
+            <div class="hero-conten text-center">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">About</h1>
+                    <p class="py-6">
+                        Curious about the developer? Here's more about them!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- projects grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+            <div>
+                <img class="w-full" src="https://indyschild.com/wp-content/uploads/2023/07/AdobeStock_273849119.jpeg" alt="Sunflower Field" />
+            </div>
+            <div>          
+                <p>Hi! My name is Phoenix and I am an ex-financial analyst and current computer programming student.</p> <br>
+                <p>I created this application as an assignment for my web development course. It features a responsive web application written using Javascript, ejs, and tailwind as it's CSS framework. It also features information about climate change projects taken from <a class="link-secondary" target="_blank" href="https://drawdown.org/">Project Drawdown.</a></p><br>
+                <p>This page highlights the amazing the people at Project Drawdown are doing to fight climate change. I believe that sharing stories of innovation and hope can spark more action and remind us that positive change is possible. Please check out their website or the links on this page to learn more about exciting projects!</p><br>
+            </div>
+        </div>                
+     </div>
+</body>
+</html>

@@ -28,6 +28,14 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
+app.get("/about", (req, res) => {
+    res.render("about");
+});
+
+app.get("/error", (req, res) => {
+    res.render("404");
+});
+
 app.get("/solutions/projects", (req, res) => {
     projectData.getAllProjects().then((projects) => {
         res.json(projects);
