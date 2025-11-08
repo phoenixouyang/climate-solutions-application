@@ -3,7 +3,7 @@ const sectorData = require("../data/sectorData.json");
 
 let projects = [];
 
-function Initialize() {
+function initialize() {
     projects = [...projectData];
 
     return new Promise((resolve, reject) => {
@@ -42,4 +42,4 @@ function getProjectsBySector(sector) {
     })
 }
 
-module.exports = { Initialize, getAllProjects, getProjectById, getProjectsBySector };
+module.exports = { initialize, getAllProjects, getProjectById, getProjectsBySector };

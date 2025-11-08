@@ -10,16 +10,13 @@
 *
 ********************************************************************************/
 
-require("dotenv").config();
 const express = require('express');
 const app = express();
 const port = 3000;
-const path = require('path');
 const projectData = require("./modules/projects");
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
-
-app.use(express.static('public'));
 
 app.get("/", (req, res) => {
     res.render("home");
@@ -76,7 +73,7 @@ app.use((req, res, next) => {
   })
 });
 
-projectData.Initialize()
+projectData.initialize()
     .then(() => {
         app.listen(port, () => console.log(`Application listening on port ${port}`));
     })
