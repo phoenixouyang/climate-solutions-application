@@ -8,6 +8,8 @@ This page is written using Javascript, Ejs, and TailwindCSS, and features dynami
 [![Tailwind]][Tailwind-url]
 [![DaisyUI]][DaisyUI-url]
 
+<img src="public/climate-solutions.png" alt="screenshot of climate solutions homepage" width="800">
+
 ## Getting Started
 To check out the page, you can access it from the deployed link [here](https://climate-solutions-drawdown.vercel.app/).
 
